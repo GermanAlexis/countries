@@ -2,8 +2,9 @@
 <hr style="color: gray" />
 <ul class="list-group ps-0">
   <li
-    routerLink="['/home']"
+    [routerLink]="['/home']"
     routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
     class="list-group-item list-group-item-dark ps-2"
   >
     Home
