@@ -8,6 +8,13 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about-to', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  {
+    path: 'countries',
+    loadChildren: () =>
+      import('./countries/countries-routing.module').then(
+        (m) => m.CountriesRoutingModule
+      ),
+  },
   { path: '**', redirectTo: 'home' },
 ];
 
