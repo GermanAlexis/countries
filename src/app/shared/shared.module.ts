@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { SearchBoxComponent } from './components/search-box/search-box.component';
 
 const SHARED_COMPONENT = [
   SidebarComponent,
@@ -13,7 +14,7 @@ const SHARED_COMPONENT = [
   ContactComponent,
 ];
 @NgModule({
-  declarations: [...SHARED_COMPONENT],
+  declarations: [...SHARED_COMPONENT, SearchBoxComponent],
   imports: [CommonModule, RouterModule],
   exports: [...SHARED_COMPONENT],
 })
