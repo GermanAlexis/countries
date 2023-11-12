@@ -7,8 +7,8 @@ import { ByRegionPagesComponent } from './pages/by-region-pages/by-region-pages.
 
 const routes: Routes = [
   { path: 'by-capital', component: ByCapitalPagesComponent },
-  { path: 'country', component: ByCountryPagesComponent },
-  { path: 'region', component: ByRegionPagesComponent },
+  { path: 'by-country', component: ByCountryPagesComponent },
+  { path: 'by-region', component: ByRegionPagesComponent },
   { path: '**', redirectTo: 'by-capital' },
 ];
 

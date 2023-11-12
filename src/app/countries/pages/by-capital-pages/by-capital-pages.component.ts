@@ -4,4 +4,8 @@ import { Component } from '@angular/core';
   selector: 'by-capital-pages',
   templateUrl: './by-capital-pages.component.html',
 })
-export class ByCapitalPagesComponent {}
+export class ByCapitalPagesComponent {
+  onSearchByCapital(capital: string) {
+    console.log(capital);
+  }
+}

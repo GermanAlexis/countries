@@ -5,10 +5,9 @@ const routes: Routes = [
   {
     path: 'countries',
     loadChildren: () =>
-      import('./countries/countries-routing.module').then(
-        (m) => m.CountriesRoutingModule
-      ),
+      import('./countries/countries.module').then((m) => m.CountriesModule),
   },
+  { path: '**', redirectTo: 'countries' },
 ];
 
 @NgModule({

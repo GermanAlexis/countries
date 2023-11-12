@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ByCapitalPagesComponent } from './pages/by-capital-pages/by-capital-pages.component';
 import { ByCountryPagesComponent } from './pages/by-country-pages/by-country-pages.component';
 import { ByRegionPagesComponent } from './pages/by-region-pages/by-region-pages.component';
+import { CountriesRoutingModule } from './countries-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -11,6 +12,6 @@ import { SharedModule } from '../shared/shared.module';
     ByCountryPagesComponent,
     ByRegionPagesComponent,
   ],
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, CountriesRoutingModule, SharedModule],
 })
 export class CountriesModule {}
