@@ -5,12 +5,14 @@ import { ByCountryPagesComponent } from './pages/by-country-pages/by-country-pag
 import { ByRegionPagesComponent } from './pages/by-region-pages/by-region-pages.component';
 import { CountriesRoutingModule } from './countries-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { CountryTableComponent } from './components/country-table/country-table.component';
 
 @NgModule({
   declarations: [
     ByCapitalPagesComponent,
     ByCountryPagesComponent,
     ByRegionPagesComponent,
+    CountryTableComponent,
   ],
   imports: [CommonModule, CountriesRoutingModule, SharedModule],
 })
