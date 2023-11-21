@@ -15,4 +15,19 @@ export class CountriesService {
     const url = `${Base_Url}capital/${term}`;
     return this.http.get<Country[]>(url).pipe(catchError(() => of([])));
   }
+
+  public searchCountry(term: string): Observable<Country[]> {
+    const url = `${Base_Url}country/${term}`;
+    return this.http.get<Country[]>(url).pipe(catchError(() => of([])));
+  }
+
+  public searchRegion(term: string): Observable<Country[]> {
+    const url = `${Base_Url}region/${term}`;
+    return this.http.get<Country[]>(url).pipe(catchError(() => of([])));
+  }
+
+  public searchByCode(term: string): Observable<Country[]> {
+    const url = `${Base_Url}name/${term}`;
+    return this.http.get<Country[]>(url).pipe(catchError(() => of([])));
+  }
 }
