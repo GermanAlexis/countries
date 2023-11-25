@@ -2,7 +2,7 @@
   class="alert alert-warning text-center"
   *ngIf="!countries.length; else table"
 >
-  not found country
+  not match with term
 </div>
 
 <ng-template #table>
@@ -33,7 +33,13 @@
         <td class="text-center">{{ country.name.common }}</td>
         <td class="text-center">{{ country.capital }}</td>
         <td class="text-center">{{ country.population }}</td>
-        <td class="text-center"><a href="#">view detail </a></td>
+        <td class="text-center">
+          <a
+            [routerLink]="['/countries/by', country.cca3]"
+            routerLinkActive="router-link-active"
+            >view detail
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>

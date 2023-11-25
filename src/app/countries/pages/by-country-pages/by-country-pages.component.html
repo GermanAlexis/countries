@@ -1,1 +1,14 @@
-<p>by-country-pages works!</p>
+<h1 class="text-white">Country</h1>
+<hr />
+
+<div class="row">
+  <search-box
+    placeholder="Search by Country"
+    (onValue)="onSearchByCountry($event)"
+  ></search-box>
+</div>
+
+<h2 class="text-white pt-2">Table</h2>
+<div class="row">
+  <country-table [countries]="countries"></country-table>
+</div>

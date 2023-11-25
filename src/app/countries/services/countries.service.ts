@@ -11,23 +11,28 @@ const Base_Url = environment.APICOUNTRY;
 })
 export class CountriesService {
   constructor(private http: HttpClient) {}
+
+  private getCountryRequest(url: string): Observable<Country[]> {
+    return this.http.get<Country[]>(url).pipe(catchError(() => of([])));
+  }
+
   public searchCapital(term: string): Observable<Country[]> {
     const url = `${Base_Url}capital/${term}`;
-    return this.http.get<Country[]>(url).pipe(catchError(() => of([])));
+    return this.getCountryRequest(url);
   }
 
   public searchCountry(term: string): Observable<Country[]> {
     const url = `${Base_Url}country/${term}`;
-    return this.http.get<Country[]>(url).pipe(catchError(() => of([])));
+    return this.getCountryRequest(url);
   }
 
   public searchRegion(term: string): Observable<Country[]> {
     const url = `${Base_Url}region/${term}`;
-    return this.http.get<Country[]>(url).pipe(catchError(() => of([])));
+    return this.getCountryRequest(url);
   }
 
   public searchByCode(term: string): Observable<Country[]> {
-    const url = `${Base_Url}name/${term}`;
+    const url = `${Base_Url}alpha/${term}`;
     return this.http.get<Country[]>(url).pipe(catchError(() => of([])));
   }
 }

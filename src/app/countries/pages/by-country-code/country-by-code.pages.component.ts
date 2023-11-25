@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { switchMap } from 'rxjs';
+import { switchMap, tap } from 'rxjs';
 import { Country } from '../../interfaces/countries.interfaces';
 import { CountriesService } from '../../services/countries.service';
 

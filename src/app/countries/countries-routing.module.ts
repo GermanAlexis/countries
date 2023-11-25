@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ByCapitalPagesComponent } from './pages/by-capital-pages/by-capital-pages.component';
 import { ByCountryPagesComponent } from './pages/by-country-pages/by-country-pages.component';
@@ -15,6 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
 export class CountriesRoutingModule {}
