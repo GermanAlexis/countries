@@ -4,6 +4,7 @@
 <div class="row">
   <search-box
     placeholder="Search by Country"
+    [inputValue]="initialValue"
     (onValue)="onSearchByCountry($event)"
   ></search-box>
 </div>

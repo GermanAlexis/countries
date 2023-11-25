@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { switchMap, tap } from 'rxjs';
+import { switchMap } from 'rxjs';
 import { Country } from '../../interfaces/countries.interfaces';
 import { CountriesService } from '../../services/countries.service';
 
@@ -15,10 +15,10 @@ export class ByCountryCodeComponent implements OnInit {
     private countriesService: CountriesService
   ) {}
 
-  country?: Country;
+  country?: Country | null;
   ngOnInit(): void {
     this.activateRouter.params
       .pipe(switchMap(({ code }) => this.countriesService.searchByCode(code)))
-      .subscribe((country) => (this.country = country[0]));
+      .subscribe((country) => (this.country = country));
   }
 }

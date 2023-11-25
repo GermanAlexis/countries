@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { Country } from '../../interfaces/countries.interfaces';
 import { CountriesService } from '../../services/countries.service';
-
-type Region = 'Americas' | 'Europe' | 'Africa' | 'Oceania' | 'Asia';
+import { Region } from '../../interfaces/region.type';
 
 @Component({
   selector: 'app-by-region-pages',
@@ -16,6 +15,10 @@ export class ByRegionPagesComponent {
   selectedRegion?: Region;
 
   constructor(private countriesService: CountriesService) {}
+  ngOnInit(): void {
+    this.countries = this.countriesService.catchStore.byRegion.countries;
+    this.selectedRegion = this.countriesService.catchStore.byRegion.region;
+  }
 
   onSearchByRegion(region: Region) {
     this.selectedRegion = region;

@@ -31,6 +31,9 @@ export class SearchBoxComponent implements OnInit, OnDestroy {
   @Input()
   placeholder: string = '';
 
+  @Input()
+  inputValue: string = '';
+
   onSearch(searchTerm: string): void {
     this.debounce.next(searchTerm);
   }
