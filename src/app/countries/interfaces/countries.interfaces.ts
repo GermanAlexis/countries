@@ -118,7 +118,7 @@ interface Idd {
 }
 
 interface Currencies {
-  EUR: EUR;
+  [x: string]: EUR;
 }
 
 interface EUR {

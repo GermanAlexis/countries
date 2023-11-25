@@ -11,8 +11,8 @@ export class ByCapitalPagesComponent {
 
   constructor(private countriesService: CountriesService) {}
   onSearchByCapital(capital: string) {
-    this.countriesService
-      .searchCapital(capital)
-      .subscribe((country) => (this.countries = country));
+    this.countriesService.searchCapital(capital).subscribe((country) => {
+      this.countries = country;
+    });
   }
 }

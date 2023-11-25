@@ -3,9 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-by-region-pages',
   templateUrl: './by-region-pages.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class ByRegionPagesComponent {
-
-}
+export class ByRegionPagesComponent {}
