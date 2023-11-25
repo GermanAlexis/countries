@@ -9,12 +9,15 @@ import { CountriesService } from '../../services/countries.service';
 })
 export class ByRegionPagesComponent {
   countries: Country[] = [];
+  isLoading: boolean = false;
 
   constructor(private countriesService: CountriesService) {}
 
   onSearchByRegion(region: string) {
     this.countriesService.searchRegion(region).subscribe((country) => {
+      this.isLoading = true;
       this.countries = country;
+      this.isLoading = false;
     });
   }
 }

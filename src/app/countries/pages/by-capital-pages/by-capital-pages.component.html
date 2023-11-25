@@ -10,5 +10,6 @@
 
 <h2 class="text-white pt-2">Table</h2>
 <div class="row">
+  <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
   <country-table [countries]="countries"></country-table>
 </div>
